@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Proptypes from 'prop-types';
-import { RenderRoutes } from '../../routes';
+import { RenderRoutes } from '../routes';
 
 export default class App extends Component {
 

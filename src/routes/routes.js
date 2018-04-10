@@ -1,11 +1,9 @@
 import {
-  MasterLayout,
   HomePage
-} from '../container/HomePage';
-import {
-  App,
-  ErrorPage
-} from '../container/Main';
+} from '../components/home';
+
+import App from '../containers/App';
+import NotFound from '../containers/NotFound';
 
 const routes = [
   {
@@ -17,12 +15,7 @@ const routes = [
       },
 
       {
-        component: MasterLayout,
-        path: '/home'
-      },
-
-      {
-        component: ErrorPage
+        component: NotFound
       }
     ]
   }
