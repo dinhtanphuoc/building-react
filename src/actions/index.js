@@ -1,5 +1,5 @@
-import {setTracks} from './track';
+import { authLogout } from './auth';
 
 export {
-  setTracks
+  authLogout
 };

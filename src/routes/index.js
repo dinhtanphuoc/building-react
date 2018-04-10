@@ -1,5 +1,5 @@
 import routes from './routes';
-import RenderRoutes from './RenderRoutes';
+import RenderRoutes from './renderRoutes';
 
 export {
   routes,

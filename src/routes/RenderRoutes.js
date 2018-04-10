@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import Switch from 'react-router/Switch';
 import Route from 'react-router/Route';
 
-const RenderRouters = ({ routes, history }) => {
-
+const renderRouters = ({ routes, history }) => {
   return (
     <Switch>
       {routes.map((route, i) => (
@@ -14,9 +13,7 @@ const RenderRouters = ({ routes, history }) => {
           history={history}
           exact
           render={() => (
-            <div>
-              <route.component route={route}/>
-            </div>
+            <route.component route={route}/>
           )}
         />
       ))}
@@ -24,9 +21,9 @@ const RenderRouters = ({ routes, history }) => {
   )
 }
 
-RenderRouters.propTypes = {
+renderRouters.propTypes = {
   routes: PropTypes.array.isRequired,
   history: PropTypes.object
 }
 
-export default RenderRouters;
+export default renderRouters;
