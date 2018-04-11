@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Switch from 'react-router/Switch';
 import Route from 'react-router/Route';
+import ConnectedSwitch from './connectedSwitch';
+import withRouter from 'react-router/withRouter';
+import { connect } from 'react-redux';
 
-const renderRouters = ({ routes, history }) => {
+const renderRoutes = ({ routes, history, location }) => {
   return (
-    <Switch>
+    <ConnectedSwitch>
       {routes.map((route, i) => (
         <Route
           key={i}
@@ -17,13 +19,15 @@ const renderRouters = ({ routes, history }) => {
           )}
         />
       ))}
-    </Switch>
+    </ConnectedSwitch>
   )
 }
 
-renderRouters.propTypes = {
+renderRoutes.propTypes = {
   routes: PropTypes.array.isRequired,
   history: PropTypes.object
 }
 
-export default renderRouters;
+const mapStateToProps = state => ({});
+
+export default withRouter(connect(mapStateToProps, null)(renderRoutes));
