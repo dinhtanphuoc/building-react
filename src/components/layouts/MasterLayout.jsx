@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import {
   Footer,
-  Header
+  Header,
+  TopNav,
+  SubNav,
+  Row
 } from '../layouts';
 
 class HomePage extends Component {
@@ -11,8 +14,19 @@ class HomePage extends Component {
     return (
       <div>
         <Header />
-          {children}
-        <Footer />
+        <div className="dashboard-container">
+          <div className="container">
+            <TopNav />
+            <SubNav />
+            <div className="dashboard-wrapper">
+              <div className="left-sidebar">
+                <Row />
+                {children}
+              </div>
+            </div>
+          </div>
+          <Footer />
+        </div>
       </div>
     );
   }
