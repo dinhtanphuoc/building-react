@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Proptypes from 'prop-types';
 import { RenderRoutes } from '../routes';
-
+import { MasterLayout } from '../components/layouts';
 export default class App extends Component {
 
   static propTypes = {
@@ -9,10 +9,11 @@ export default class App extends Component {
   }
 
   render() {
+    const { route } = this.props;
     return (
-      <div>
-        <RenderRoutes routes={this.props.route.routes}/>
-      </div>
+      <MasterLayout>
+        <RenderRoutes routes={route.routes}/>
+      </MasterLayout>
     );
   }
 }

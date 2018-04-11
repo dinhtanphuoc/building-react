@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 
-class HomePage extends Component {
+class Category extends Component {
 
   constructor(props) {
     super(props);
@@ -22,19 +22,19 @@ class HomePage extends Component {
         <Redirect
           push
           to={{
-            pathname: `/product`
+            pathname: `/`
           }}
         />
       )
     }
     return (
       <div>
-          <h2>HomePage</h2>
-          <button onClick={this.handleSubmit}>product</button>
+          <h2>Category</h2>
+          <button onClick={this.handleSubmit}>Home</button>
       </div>
     );
   }
 }
 
 
-export default HomePage;
+export default Category;
